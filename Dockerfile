@@ -4,7 +4,7 @@ MAINTAINER nikhil gupta
 
 EXPOSE 3000
 
-COPY ./Nodejs_demo /app
+COPY . /app
 WORKDIR /app
 
 RUN npm install
