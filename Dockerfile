@@ -9,6 +9,7 @@ RUN apt-get install -y npm
 RUN apt-get install -y nodejs
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
+EXPOSE 3000
 
 COPY ./Nodejs_demo /app
 WORKDIR /app
