@@ -1,13 +1,6 @@
-FROM ubuntu:16.04
+FROM node:8
 MAINTAINER nikhil gupta
-RUN apt-get -y update \
-    && add-apt-repository ppa:webupd8team/java -y \
-    && apt-get -y update \ 
-    && apt-get install -y oracle-java8-installer
-    
-RUN apt-get install -y npm
-RUN apt-get install -y nodejs
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+
 
 EXPOSE 3000
 
@@ -16,6 +9,6 @@ WORKDIR /app
 
 RUN npm install
 
-CMD ["npm start"]
+CMD ["npm", "start"]
 
 
